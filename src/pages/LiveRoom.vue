@@ -113,8 +113,8 @@ onMounted(async () => {
     })
 
     // WebSocket连接
-    const backendHost = window.location.hostname // 自动适配当前访问的 IP
-    const wsUrl = `ws://${backendHost}:8080/v1/api/ws/${liveRoom.value.id}`
+    const baseURL = import.meta.env.VITE_API_BASE || window.location.origin
+    const wsUrl = baseURL.replace(/^http/, 'ws') + `/ws/${liveRoom.value.id}`
     socket = new WebSocket(wsUrl)
     socket.onmessage = (event) => {
       const msg = JSON.parse(event.data)
