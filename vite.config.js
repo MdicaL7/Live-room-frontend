@@ -15,7 +15,7 @@ export default defineConfig({
       '/v1/api': {
         target: 'http://localhost:8080',
         changeOrigin: true,
-        rewrite: (path) => path, // 不修改path
+        rewrite: (path) => path, 
       },
     },
   }

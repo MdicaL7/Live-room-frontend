@@ -9,7 +9,6 @@
 </template>
 <script setup></script>
 <style scoped>
-/* 复制 .anchor-card, .anchor-avatar, .anchor-name 样式 */
 .anchor-card {
   background: #fff;
   border-radius: 10px;

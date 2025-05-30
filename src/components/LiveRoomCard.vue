@@ -24,7 +24,6 @@ const formatTime = (time) => {
 }
 </script>
 <style scoped>
-/* 复制 .liveRoom-card, .liveRoom-cover, .liveRoom-info, .live-tag, .liveRoom-title, .liveRoom-time, .live-status 样式 */
 .liveRoom-card {
   display: flex;
   background: #fff;

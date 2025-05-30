@@ -37,7 +37,7 @@ import qs from 'qs'
 const props = defineProps({
   modelValue: Boolean,
 })
-const emit = defineEmits(['update:modelValue', 'login-success']) // 新增login-success
+const emit = defineEmits(['update:modelValue', 'login-success']) 
 const loginForm = ref({ username: '', password: '' })
 const loginFormRef = ref(null)
 const loginLoading = ref(false)
@@ -73,8 +73,6 @@ async function handleLogin() {
       emit('login-success', res.data.data.username)
       emit('update:modelValue', false)
       resetLoginForm()
-      // 不再刷新页面
-      // window.location.reload()
     } else {
       loginMsg.value = res.data.msg || '登录失败'
     }
